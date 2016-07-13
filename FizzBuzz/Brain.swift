@@ -10,4 +10,10 @@ import Foundation
 
 class Brain: NSObject {
 
+
+    // MARK: - Public methods
+
+    func isDivisibleByThree(number: Int) -> Bool {
+        return true
+    }
 }
