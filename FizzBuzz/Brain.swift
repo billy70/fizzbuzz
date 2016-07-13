@@ -14,6 +14,10 @@ class Brain: NSObject {
     // MARK: - Public methods
 
     func isDivisibleByThree(number: Int) -> Bool {
-        return true
+        if number % 3 == 0 {
+            return true
+        } else {
+            return false
+        }
     }
 }
