@@ -9,31 +9,25 @@
 import Foundation
 
 class Brain: NSObject {
+    
+    // MARK: - Private methods
+    
+    private func isDivisibleBy(divisor: Int, number: Int) -> Bool {
+        return number % divisor == 0
+    }
 
 
     // MARK: - Public methods
 
     func isDivisibleByThree(number: Int) -> Bool {
-        if number % 3 == 0 {
-            return true
-        } else {
-            return false
-        }
+        return isDivisibleBy(3, number: number)
     }
     
     func isDivisibleByFive(number: Int) -> Bool {
-        if number % 5 == 0 {
-            return true
-        } else {
-            return false
-        }
+        return isDivisibleBy(5, number: number)
     }
     
     func isDivisibleByFifteen(number: Int) -> Bool {
-        if number % 15 == 0 {
-            return true
-        } else {
-            return false
-        }
+        return isDivisibleBy(15, number: number)
     }
 }
