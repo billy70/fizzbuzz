@@ -7,8 +7,11 @@
 //
 
 import XCTest
+@testable import FizzBuzz
 
 class GameTests: XCTestCase {
+    
+    let game = Game()
     
     override func setUp() {
         super.setUp()

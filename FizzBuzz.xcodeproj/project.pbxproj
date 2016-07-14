@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D30367061D37FEE5005D66A4 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30367051D37FEE5005D66A4 /* GameTests.swift */; };
+		D30367081D38000B005D66A4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30367071D38000B005D66A4 /* Game.swift */; };
 		D35805C81D36E31C0047097D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35805C71D36E31C0047097D /* AppDelegate.swift */; };
 		D35805CA1D36E31C0047097D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35805C91D36E31C0047097D /* ViewController.swift */; };
 		D35805CD1D36E31C0047097D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35805CB1D36E31C0047097D /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		D30367051D37FEE5005D66A4 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		D30367071D38000B005D66A4 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D35805C41D36E31C0047097D /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35805C71D36E31C0047097D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D35805C91D36E31C0047097D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				D35805D01D36E31C0047097D /* LaunchScreen.storyboard */,
 				D35805D31D36E31C0047097D /* Info.plist */,
 				D35805F71D36E79F0047097D /* Brain.swift */,
+				D30367071D38000B005D66A4 /* Game.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				D35805CA1D36E31C0047097D /* ViewController.swift in Sources */,
 				D35805F81D36E79F0047097D /* Brain.swift in Sources */,
 				D35805C81D36E31C0047097D /* AppDelegate.swift in Sources */,
+				D30367081D38000B005D66A4 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
