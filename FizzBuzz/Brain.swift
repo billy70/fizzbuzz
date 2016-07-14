@@ -30,4 +30,26 @@ class Brain: NSObject {
     func isDivisibleByFifteen(number: Int) -> Bool {
         return isDivisibleBy(15, number: number)
     }
+    
+    /*
+     The classic FizzBuzz competency test.
+     
+     If the number is divisible by 3, return Fizz.
+     If the number is divisible by 5, return Buzz.
+     If the number is divisible by both 3 AND 5, return FizzBuzz.
+     Otherwise, return the number back that was passed in.
+     
+     Input is an integer, output is a string.
+    */
+    func say(number: Int) -> String {
+        if isDivisibleByFifteen(number) {
+            return "FizzBuzz"
+        } else if isDivisibleByThree(number) {
+            return "Fizz"
+        } else if isDivisibleByFive(number) {
+            return "Buzz"
+        } else {
+            return "\(number)"
+        }
+    }
 }
