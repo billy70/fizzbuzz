@@ -25,6 +25,6 @@ class Game {
     // MARK: Public methods
     
     func play() {
-        score = 1
+        score += 1
     }
 }
