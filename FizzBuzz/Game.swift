@@ -24,7 +24,9 @@ class Game {
     
     // MARK: Public methods
     
-    func play() {
+    func play(move: String) -> Bool {
         score += 1
+        
+        return true
     }
 }
