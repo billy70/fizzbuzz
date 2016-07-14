@@ -53,4 +53,42 @@ class GameTests: XCTestCase {
         let result = game.play("Fizz")
         XCTAssertEqual(result, false)
     }
+    
+    func testIfMoveForBuzzIsCorrect() {
+        game.score = 4
+        let result = game.play("Buzz")
+        XCTAssertEqual(result, true)
+    }
+    
+    func testIfMoveForBuzzIsIncorrect() {
+        game.score = 1
+        let result = game.play("Buzz")
+        XCTAssertEqual(result, false)
+    }
+    
+    func testIfMoveForFizzBuzzIsCorrect() {
+        game.score = 14
+        let result = game.play("FizzBuzz")
+        XCTAssertEqual(result, true)
+    }
+    
+    func testIfMoveForFizzBuzzIsIncorrect() {
+        game.score = 1
+        let result = game.play("FizzBuzz")
+        XCTAssertEqual(result, false)
+    }
+    
+    func testIfMoveForNumberIsCorrect() {
+        game.score = 1
+        let result = game.play("2")
+        XCTAssertEqual(result, true)
+    }
+    
+    func testIfMoveForNumberIsIncorrect() {
+        game.score = 14
+        let result = game.play("15")
+        // `result` should equal "FizzBuzz" since 15 is divisible by both 3 and 5
+        XCTAssertEqual(result, false)
+    }
+    
 }
