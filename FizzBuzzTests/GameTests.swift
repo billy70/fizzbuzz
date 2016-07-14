@@ -38,7 +38,7 @@ class GameTests: XCTestCase {
         XCTAssertTrue(game.score == 2)
     }
     
-    func testIfMoveIsCorrect() {
+    func testIfMoveForFizzIsCorrect() {
         // Set score to 2 so that the next play increments it to 3
         // which means that the next move should be "Fizz".
         game.score = 2
@@ -46,7 +46,7 @@ class GameTests: XCTestCase {
         XCTAssertEqual(result, true)
     }
     
-    func testIfMoveIsIncorrect() {
+    func testIfMoveForFizzIsIncorrect() {
         // Set score to 3 so that the next play increments it to 4
         // which means that the next move will NOT be "Fizz".
         game.score = 3
