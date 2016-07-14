@@ -9,5 +9,15 @@
 import Foundation
 
 class Game {
+
+    // MARK: - Public properties
     
+    var score: Int
+    
+    
+    // MARK: - Initializers
+    
+    init() {
+        score = 0
+    }
 }
