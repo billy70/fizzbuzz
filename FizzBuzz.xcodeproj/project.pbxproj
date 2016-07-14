@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30367061D37FEE5005D66A4 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30367051D37FEE5005D66A4 /* GameTests.swift */; };
 		D35805C81D36E31C0047097D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35805C71D36E31C0047097D /* AppDelegate.swift */; };
 		D35805CA1D36E31C0047097D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35805C91D36E31C0047097D /* ViewController.swift */; };
 		D35805CD1D36E31C0047097D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35805CB1D36E31C0047097D /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D30367051D37FEE5005D66A4 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		D35805C41D36E31C0047097D /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35805C71D36E31C0047097D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D35805C91D36E31C0047097D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		D35805DB1D36E31C0047097D /* FizzBuzzTests */ = {
 			isa = PBXGroup;
 			children = (
+				D30367051D37FEE5005D66A4 /* GameTests.swift */,
 				D35805F51D36E5220047097D /* BrainTests.swift */,
 				D35805DE1D36E31C0047097D /* Info.plist */,
 			);
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35805F61D36E5220047097D /* BrainTests.swift in Sources */,
+				D30367061D37FEE5005D66A4 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +498,7 @@
 				D35805EE1D36E31C0047097D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D35805EF1D36E31C0047097D /* Build configuration list for PBXNativeTarget "FizzBuzzTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +507,7 @@
 				D35805F11D36E31C0047097D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D35805F21D36E31C0047097D /* Build configuration list for PBXNativeTarget "FizzBuzzUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +516,7 @@
 				D35805F41D36E31C0047097D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
