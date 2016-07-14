@@ -27,12 +27,12 @@ class GameTests: XCTestCase {
         XCTAssertTrue(game.score == 0)
     }
     
-    func testOnPlayScoreIsIncremented() {
+    func testOnPlayThatTheScoreIsIncremented() {
         game.play()
         XCTAssertTrue(game.score == 1)
     }
     
-    func testOnTwoPlaysScoreEqualsTwo() {
+    func testOnTwoPlaysThatTheScoreEqualsTwo() {
         game.play()
         game.play()
         XCTAssertTrue(game.score == 2)
