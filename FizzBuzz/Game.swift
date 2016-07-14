@@ -15,6 +15,11 @@ class Game {
     var score: Int
     
     
+    // MARK: - Private properties
+    
+    let brain = Brain()
+    
+    
     // MARK: - Initializers
     
     init() {
@@ -27,6 +32,12 @@ class Game {
     func play(move: String) -> Bool {
         score += 1
         
-        return true
+        let result = brain.say(score)
+        
+        if result == move {
+            return true
+        } else {
+            return false
+        }
     }
 }

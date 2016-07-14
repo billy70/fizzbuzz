@@ -45,4 +45,12 @@ class GameTests: XCTestCase {
         let result = game.play("Fizz")
         XCTAssertEqual(result, true)
     }
+    
+    func testIfMoveIsIncorrect() {
+        // Set score to 3 so that the next play increments it to 4
+        // which means that the next move will NOT be "Fizz".
+        game.score = 3
+        let result = game.play("Fizz")
+        XCTAssertEqual(result, false)
+    }
 }
