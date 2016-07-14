@@ -20,4 +20,11 @@ class Game {
     init() {
         score = 0
     }
+    
+    
+    // MARK: Public methods
+    
+    func play() {
+        score = 1
+    }
 }
