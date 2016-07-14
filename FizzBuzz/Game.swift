@@ -30,11 +30,10 @@ class Game {
     // MARK: Public methods
     
     func play(move: String) -> Bool {
-        score += 1
-        
-        let result = brain.say(score)
+        let result = brain.say(score + 1)
         
         if result == move {
+            score += 1
             return true
         } else {
             return false

@@ -27,17 +27,6 @@ class GameTests: XCTestCase {
         XCTAssertTrue(game.score == 0)
     }
     
-    func testOnPlayThatTheScoreIsIncremented() {
-        game.play("string")
-        XCTAssertTrue(game.score == 1)
-    }
-    
-    func testOnTwoPlaysThatTheScoreEqualsTwo() {
-        game.play("string")
-        game.play("string")
-        XCTAssertTrue(game.score == 2)
-    }
-    
     func testIfMoveForFizzIsCorrect() {
         // Set score to 2 so that the next play increments it to 3
         // which means that the next move should be "Fizz".
@@ -89,6 +78,12 @@ class GameTests: XCTestCase {
         let result = game.play("15")
         // `result` should equal "FizzBuzz" since 15 is divisible by both 3 and 5
         XCTAssertEqual(result, false)
+    }
+    
+    func testScoreNotIncrementedOnIncorrectMove() {
+        game.score = 1
+        game.play("Fizz")
+        XCTAssertEqual(game.score, 1)
     }
     
 }
