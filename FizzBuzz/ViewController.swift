@@ -11,8 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     
     var game: Game?
-    var gameScore: Int?
+    var gameScore: Int? {
+        didSet {
+            numberButton.setTitle("1", forState: .Normal)
+        }
+    }
 
+    @IBOutlet weak var numberButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,5 +40,8 @@ class ViewController: UIViewController {
         gameScore = result.score
     }
 
+    @IBAction func numberButtonTapped(sender: UIButton) {
+        play("1")
+    }
 }
 

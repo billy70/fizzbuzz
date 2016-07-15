@@ -42,6 +42,9 @@
                                         <state key="normal" title="0" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpQ-IN-jHR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urx-Hm-eRo">
                                         <rect key="frame" x="249" y="0.0" width="230.5" height="230.5"/>
@@ -95,6 +98,9 @@
                             <constraint firstItem="0M6-Ym-oAg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="xNg-fZ-ugE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberButton" destination="wHI-2y-Tpd" id="Oxw-gw-TWg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

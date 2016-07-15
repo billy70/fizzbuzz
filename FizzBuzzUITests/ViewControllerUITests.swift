@@ -32,7 +32,7 @@ class ViewControllerUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         XCUIApplication().buttons["0"].tap()
-        let newScore = XCUIApplication().buttons["0"].label
+        let newScore = XCUIApplication().buttons["1"].label
         XCTAssertEqual(newScore, "1")
     }
 
