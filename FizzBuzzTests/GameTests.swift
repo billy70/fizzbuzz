@@ -32,7 +32,7 @@ class GameTests: XCTestCase {
         // which means that the next move should be "Fizz".
         game.score = 2
         let result = game.play("Fizz")
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.correct, true)
     }
     
     func testIfMoveForFizzIsIncorrect() {
@@ -40,50 +40,59 @@ class GameTests: XCTestCase {
         // which means that the next move will NOT be "Fizz".
         game.score = 3
         let result = game.play("Fizz")
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.correct, false)
     }
     
     func testIfMoveForBuzzIsCorrect() {
         game.score = 4
         let result = game.play("Buzz")
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.correct, true)
     }
     
     func testIfMoveForBuzzIsIncorrect() {
         game.score = 1
         let result = game.play("Buzz")
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.correct, false)
     }
     
     func testIfMoveForFizzBuzzIsCorrect() {
         game.score = 14
         let result = game.play("FizzBuzz")
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.correct, true)
     }
     
     func testIfMoveForFizzBuzzIsIncorrect() {
         game.score = 1
         let result = game.play("FizzBuzz")
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.correct, false)
     }
     
     func testIfMoveForNumberIsCorrect() {
         game.score = 1
         let result = game.play("2")
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result.correct, true)
     }
     
     func testIfMoveForNumberIsIncorrect() {
         game.score = 14
         let result = game.play("15")
-        // `result` should equal "FizzBuzz" since 15 is divisible by both 3 and 5
-        XCTAssertEqual(result, false)
+        XCTAssertEqual(result.correct, false)
     }
     
     func testScoreNotIncrementedOnIncorrectMove() {
         game.score = 1
         game.play("Fizz")
         XCTAssertEqual(game.score, 1)
+    }
+    
+    func testPlayShouldReturnIfMoveIsCorrect() {
+        let response = game.play("1")
+        XCTAssertNotNil(response.correct)
+    }
+    
+    func testPlayShouldReturnNewScore() {
+        let response = game.play("1")
+        XCTAssertNotNil(response.score)
     }
     
 }
