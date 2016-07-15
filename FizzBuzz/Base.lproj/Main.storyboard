@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +19,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtH-2V-b6r">
+                                <rect key="frame" x="481" y="540" width="99" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.63921568627450975" green="0.5490196078431373" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 / 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0M6-Ym-oAg">
+                                <rect key="frame" x="536" y="28" width="44" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.63921568627450975" green="0.5490196078431373" blue="0.84313725490196079" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0W-4N-A2m" userLabel="GameView">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHI-2y-Tpd">
+                                        <rect key="frame" x="0.0" y="0.0" width="230.5" height="230.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
+                                        <state key="normal" title="0" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urx-Hm-eRo">
+                                        <rect key="frame" x="249" y="0.0" width="230.5" height="230.5"/>
+                                        <state key="normal" image="champagne" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-R8-Dz9">
+                                        <rect key="frame" x="0.0" y="249" width="230.5" height="230.5"/>
+                                        <state key="normal" image="lightning" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wra-bX-ZAO">
+                                        <rect key="frame" x="249.5" y="249.5" width="230.5" height="230.5"/>
+                                        <state key="normal" image="rocket" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wbx-R8-Dz9" firstAttribute="leading" secondItem="p0W-4N-A2m" secondAttribute="leading" id="7TL-p7-hbD"/>
+                                    <constraint firstItem="wHI-2y-Tpd" firstAttribute="top" secondItem="p0W-4N-A2m" secondAttribute="top" id="9Jy-q7-eyd"/>
+                                    <constraint firstAttribute="width" secondItem="p0W-4N-A2m" secondAttribute="height" multiplier="1:1" id="ASU-Vw-XSl"/>
+                                    <constraint firstItem="Urx-Hm-eRo" firstAttribute="width" secondItem="wHI-2y-Tpd" secondAttribute="width" id="DwK-By-TWu"/>
+                                    <constraint firstItem="Wra-bX-ZAO" firstAttribute="height" secondItem="wHI-2y-Tpd" secondAttribute="height" id="JJD-JI-i91"/>
+                                    <constraint firstItem="Wra-bX-ZAO" firstAttribute="width" secondItem="wHI-2y-Tpd" secondAttribute="width" id="Lrs-wr-GaE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wra-bX-ZAO" secondAttribute="trailing" id="Ntx-r8-YSw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Urx-Hm-eRo" secondAttribute="trailing" id="Pjp-np-laK"/>
+                                    <constraint firstItem="wbx-R8-Dz9" firstAttribute="width" secondItem="wHI-2y-Tpd" secondAttribute="width" id="UHU-kZ-km5"/>
+                                    <constraint firstItem="wHI-2y-Tpd" firstAttribute="leading" secondItem="p0W-4N-A2m" secondAttribute="leading" id="W8M-Xq-iJy"/>
+                                    <constraint firstItem="wbx-R8-Dz9" firstAttribute="height" secondItem="wHI-2y-Tpd" secondAttribute="height" id="Xa1-t3-lXx"/>
+                                    <constraint firstItem="wHI-2y-Tpd" firstAttribute="height" secondItem="p0W-4N-A2m" secondAttribute="height" multiplier="0.48" id="bSV-DG-ICe"/>
+                                    <constraint firstItem="Urx-Hm-eRo" firstAttribute="height" secondItem="wHI-2y-Tpd" secondAttribute="height" id="dTw-ca-8Ab"/>
+                                    <constraint firstItem="Urx-Hm-eRo" firstAttribute="top" secondItem="p0W-4N-A2m" secondAttribute="top" id="hLk-6o-k0R"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wra-bX-ZAO" secondAttribute="bottom" id="oMC-Up-zzr"/>
+                                    <constraint firstAttribute="bottom" secondItem="wbx-R8-Dz9" secondAttribute="bottom" id="vQV-Oq-oSo"/>
+                                    <constraint firstItem="wHI-2y-Tpd" firstAttribute="width" secondItem="p0W-4N-A2m" secondAttribute="width" multiplier="0.48" id="xME-eC-C4A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63921568627450975" green="0.83529411764705885" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="p0W-4N-A2m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="9iV-fV-tD9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LtH-2V-b6r" secondAttribute="bottom" constant="20" id="DEl-Oy-APs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LtH-2V-b6r" secondAttribute="trailing" id="PXZ-hM-dPR"/>
+                            <constraint firstItem="p0W-4N-A2m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f1Q-19-V1o"/>
+                            <constraint firstItem="p0W-4N-A2m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nsR-sC-gwy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0M6-Ym-oAg" secondAttribute="trailing" id="wO1-ph-Kpd"/>
+                            <constraint firstItem="0M6-Ym-oAg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="xNg-fZ-ugE"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="564" y="468"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_border" width="400" height="400"/>
+        <image name="champagne" width="80" height="82"/>
+        <image name="lightning" width="47" height="80"/>
+        <image name="rocket" width="75" height="80"/>
+    </resources>
 </document>
