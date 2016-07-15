@@ -13,7 +13,12 @@ class ViewController: UIViewController {
     var game: Game?
     var gameScore: Int? {
         didSet {
-            numberButton.setTitle("1", forState: .Normal)
+            guard let score = gameScore else {
+                print("ViewController.gameScore is nil!")
+                return
+            }
+            
+            numberButton.setTitle("\(score)", forState: .Normal)
         }
     }
 
@@ -23,6 +28,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         game = Game()
+        
+        guard let unwrappedGame = game else {
+            print("In viewDidLoad(), ViewController.game is nil!")
+            return
+        }
+        
+        gameScore = unwrappedGame.score
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +44,7 @@ class ViewController: UIViewController {
 
     func play(move: String) {
         guard let unwrappedGame = game else {
-            print("ViewController.game is nil!")
+            print("In play(move:), ViewController.game is nil!")
             return
         }
         
@@ -41,7 +53,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func numberButtonTapped(sender: UIButton) {
-        play("1")
+        guard let score = gameScore else {
+            print("In numberButtonTapped(sender:), ViewController.gameScore is nil!")
+            return
+        }
+
+        play("\(score + 1)")
     }
 }
 
