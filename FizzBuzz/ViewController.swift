@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var gameScore: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func play(move: String) {
+        gameScore = 1
+    }
 
 }
 
