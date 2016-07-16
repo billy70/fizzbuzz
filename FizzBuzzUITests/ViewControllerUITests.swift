@@ -63,4 +63,19 @@ class ViewControllerUITests: XCTestCase {
         XCTAssertEqual(newScore, "3")
     }
 
+    func testTapBuzzButtonIncrementsScore() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzButton = app.buttons["fizzButton"]
+        let buzzButton = app.buttons["buzzButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "5")
+    }
 }
