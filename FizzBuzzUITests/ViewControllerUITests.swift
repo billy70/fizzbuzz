@@ -78,4 +78,35 @@ class ViewControllerUITests: XCTestCase {
         let newScore = numberButton.label
         XCTAssertEqual(newScore, "5")
     }
+    
+    // Helper method for the FizzBuzz button tests.
+    // This is simply to get the score to 14.
+    func playMovesTo14() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzButton = app.buttons["fizzButton"]
+        let buzzButton = app.buttons["buzzButton"]
+        
+        for move in 1...14 {
+            if move % 3 == 0 {
+                fizzButton.tap()
+            } else if move % 5 == 0 {
+                buzzButton.tap()
+            } else {
+                numberButton.tap()
+            }
+        }
+    }
+    
+    func testTapFizzBuzzButtonIncrementsScore() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let fizzBuzzButton = app.buttons["fizzBuzzButton"]
+        
+        playMovesTo14()
+        fizzBuzzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "15")
+    }
+
 }
