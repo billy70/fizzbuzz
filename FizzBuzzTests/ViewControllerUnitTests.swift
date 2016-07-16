@@ -30,14 +30,14 @@ class ViewControllerUnitTests: XCTestCase {
     }
 
     func testMoveOneIncrementsScore() {
-        viewController.play("1")
+        viewController.play(Move.Number)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 1)
     }
 
     func testMoveTwoIncrementsScoreToTwo() {
-        viewController.play("1")
-        viewController.play("2")
+        viewController.play(Move.Number)
+        viewController.play(Move.Number)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 2)
     }
@@ -48,28 +48,28 @@ class ViewControllerUnitTests: XCTestCase {
     
     func testFizzIncrementsScoreToThree() {
         viewController.game?.score = 2
-        viewController.play("Fizz")
+        viewController.play(Move.Fizz)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 3)
     }
     
     func testBuzzIncrementsScoreToFive() {
         viewController.game?.score = 4
-        viewController.play("Buzz")
+        viewController.play(Move.Buzz)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 5)
     }
     
     func testFizzBuzzIncrementsScoreToFifteen() {
         viewController.game?.score = 14
-        viewController.play("FizzBuzz")
+        viewController.play(Move.FizzBuzz)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 15)
     }
     
     func testScoreDoesNotIncrementOnIncorrectMove() {
         viewController.game?.score = 1
-        viewController.play("Buzz")
+        viewController.play(Move.Buzz)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 1)
     }

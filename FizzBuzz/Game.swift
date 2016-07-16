@@ -29,7 +29,7 @@ class Game {
     
     // MARK: Public methods
     
-    func play(move: String) -> (correct: Bool, score: Int) {
+    func play(move: Move) -> (correct: Bool, score: Int) {
         let result = brain.say(score + 1)
         
         if result == move {
