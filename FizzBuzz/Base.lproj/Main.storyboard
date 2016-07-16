@@ -44,14 +44,18 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="numberButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpQ-IN-jHR"/>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJ6-J0-qr6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urx-Hm-eRo">
                                         <rect key="frame" x="249" y="0.0" width="230.5" height="230.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="fizzButton"/>
                                         <state key="normal" image="champagne" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HvS-jI-2Ef"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-R8-Dz9">
                                         <rect key="frame" x="0.0" y="249" width="230.5" height="230.5"/>
@@ -100,12 +104,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fizzButton" destination="Urx-Hm-eRo" id="lNW-9Q-rxi"/>
                         <outlet property="numberButton" destination="wHI-2y-Tpd" id="Oxw-gw-TWg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564" y="468"/>
+            <point key="canvasLocation" x="386" y="472"/>
         </scene>
     </scenes>
     <resources>
