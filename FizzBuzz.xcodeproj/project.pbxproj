@@ -18,6 +18,7 @@
 		D35805F81D36E79F0047097D /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35805F71D36E79F0047097D /* Brain.swift */; };
 		D3912A521D3928EC00780AD0 /* ViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912A511D3928EC00780AD0 /* ViewControllerUnitTests.swift */; };
 		D3912A561D3969EF00780AD0 /* ViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912A551D3969EF00780AD0 /* ViewControllerUITests.swift */; };
+		D3912A581D3A86F500780AD0 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3912A571D3A86F500780AD0 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D35805F71D36E79F0047097D /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		D3912A511D3928EC00780AD0 /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTests.swift; sourceTree = "<group>"; };
 		D3912A551D3969EF00780AD0 /* ViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUITests.swift; sourceTree = "<group>"; };
+		D3912A571D3A86F500780AD0 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				D35805D31D36E31C0047097D /* Info.plist */,
 				D35805F71D36E79F0047097D /* Brain.swift */,
 				D30367071D38000B005D66A4 /* Game.swift */,
+				D3912A571D3A86F500780AD0 /* Move.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3912A581D3A86F500780AD0 /* Move.swift in Sources */,
 				D35805CA1D36E31C0047097D /* ViewController.swift in Sources */,
 				D35805F81D36E79F0047097D /* Brain.swift in Sources */,
 				D35805C81D36E31C0047097D /* AppDelegate.swift in Sources */,
