@@ -58,10 +58,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbx-R8-Dz9">
-                                        <rect key="frame" x="0.0" y="249" width="230.5" height="230.5"/>
+                                        <rect key="frame" x="0.0" y="250" width="230.5" height="230.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="buzzButton"/>
                                         <state key="normal" image="lightning" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2WX-CI-f6U"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wra-bX-ZAO">
                                         <rect key="frame" x="249.5" y="249.5" width="230.5" height="230.5"/>
@@ -104,6 +108,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buzzButton" destination="wbx-R8-Dz9" id="cAi-QB-LEB"/>
                         <outlet property="fizzButton" destination="Urx-Hm-eRo" id="lNW-9Q-rxi"/>
                         <outlet property="numberButton" destination="wHI-2y-Tpd" id="Oxw-gw-TWg"/>
                     </connections>

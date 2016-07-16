@@ -24,6 +24,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var numberButton: UIButton!
     @IBOutlet weak var fizzButton: UIButton!
+    @IBOutlet weak var buzzButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +55,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped(sender: UIButton) {
-        if sender == numberButton {
-            play(Move.Number)
-        } else {
-            play(Move.Fizz)
+        switch sender {
+            case numberButton: play(Move.Number)
+            case fizzButton: play(Move.Fizz)
+            case buzzButton: play(Move.Buzz)
+            default: print("\(#file):\(#line) - unknown sender in buttonTapped(sender:) method.")
         }
     }
 }
