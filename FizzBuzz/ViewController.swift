@@ -64,5 +64,15 @@ class ViewController: UIViewController {
             default: print("\(#file):\(#line) - unknown sender in buttonTapped(sender:) method.")
         }
     }
+    
+    @IBAction func playAgainTapped(sender: AnyObject) {
+        guard let unwrappedGame = game else {
+            print("In playAgainTapped(sender:), ViewController.game is nil!")
+            return
+        }
+        
+        unwrappedGame.restart()
+        gameScore = unwrappedGame.score
+    }
 }
 
