@@ -37,7 +37,7 @@ class Brain: NSObject {
      If the number is divisible by 3, return Fizz.
      If the number is divisible by 5, return Buzz.
      If the number is divisible by both 3 AND 5, return FizzBuzz.
-     Otherwise, return the number back that was passed in.
+     Otherwise, return Number.
      
      Input is an integer, output is a string.
     */
