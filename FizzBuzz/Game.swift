@@ -39,4 +39,8 @@ class Game {
             return (false, score)
         }
     }
+    
+    func restart() {
+        score = 0
+    }
 }

@@ -95,4 +95,10 @@ class GameTests: XCTestCase {
         XCTAssertNotNil(response.score)
     }
     
+    func testRestartGameSetsScoreToZero() {
+        game.score = 10
+        game.restart()
+        XCTAssertEqual(game.score, 0)
+    }
+    
 }
